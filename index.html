@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Sami Ullah - Computer Science Student, Aspiring AI/ML Engineer, C++ & Python Developer. Explore my portfolio, projects, and skills." />
+  <meta name="keywords" content="Muhammad Sami Ullah, Computer Science, AI/ML Engineer, C++, Python, Portfolio, Developer" />
+  <meta name="author" content="Muhammad Sami Ullah" />
+  <meta property="og:title" content="Muhammad Sami Ullah | CS Student & AI/ML Engineer" />
+  <meta property="og:description" content="Computer Science Student passionate about AI, ML, and Software Engineering." />
+  <meta property="og:type" content="website" />
+  <title>Muhammad Sami Ullah | CS Student & AI/ML Engineer</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Favicon Image -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+ 
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <span class="loader-text">MSU</span>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SCROLL PROGRESS BAR ===================== -->
+  <div id="scrollProgress" class="scroll-progress-bar"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Sami</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Menu -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="home" class="hero-section">
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- Animated gradient blobs -->
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <!-- Badge -->
+        <div class="hero-badge fade-in-up delay-1">
+          <span class="badge-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+
+        <!-- Name -->
+        <h1 class="hero-name fade-in-up delay-2">
+          Muhammad<br />
+          <span class="gradient-text">Sami Ullah</span>
+        </h1>
+
+        <!-- Typing Effect -->
+        <div class="hero-typing fade-in-up delay-3">
+          <span class="typing-prefix">I'm a </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+
+        <!-- Sub Description -->
+        <p class="hero-description fade-in-up delay-4">
+          Crafting intelligent software solutions at the intersection of
+          <span class="highlight-text">Artificial Intelligence</span>,
+          <span class="highlight-text">Machine Learning</span>, and
+          <span class="highlight-text">Systems Programming</span>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <<div class="hero-buttons fade-in-up delay-5">
+
+    <a href="M Sami Ullah Resume.docx" download class="btn btn-primary">
+        <i class="fas fa-download"></i>
+        <span>Download Resume</span>
+    </a>
+
+    <a href="#projects" class="btn btn-secondary">
+        <i class="fas fa-code"></i>
+        <span>View Projects</span>
+    </a>
+
+    <button type="button" class="btn btn-whatsapp" id="openWhatsappModal">
+        <i class="fab fa-whatsapp"></i>
+        <span>Message Me</span>
+    </button>
+
+</div>
+
+        <!-- Social Links -->
+        <div class="hero-socials fade-in-up delay-6">
+          <a href="https://github.com/Muhammad-Sami-Ullah53" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sami-ullah-sarfraz-b5a0b7394" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:muhammadsamiyt5@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+923296370164" class="social-icon" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://wa.me/923296370164" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual / Avatar Area -->
+      <div class="hero-visual fade-in-right delay-3">
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
+          <div class="avatar-placeholder">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
+          <!-- Floating Tech Tags -->
+          <div class="float-tag tag-1"><i class="fab fa-python"></i> Python</div>
+          <div class="float-tag tag-2"><i class="fas fa-code"></i> C++</div>
+          <div class="float-tag tag-3"><i class="fas fa-brain"></i> AI/ML</div>
+          <div class="float-tag tag-4"><i class="fab fa-github"></i> GitHub</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator fade-in-up delay-6">
+      <a href="#about" aria-label="Scroll to about section">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header reveal">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Passionate developer on a mission to build intelligent systems</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Card Left -->
+        <div class="about-card glass-card reveal slide-left">
+          <div class="about-avatar-area">
+            <div class="about-avatar">
+              <i class="fas fa-user-astronaut"></i>
+            </div>
+            <div class="about-name-tag">
+              <h3>Muhammad Sami Ullah</h3>
+              <p>CS Student & AI Enthusiast</p>
+            </div>
+          </div>
+
+          <!-- Quick Info -->
+          <div class="about-info-list">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">B.Sc. Computer Science</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Lahore Pakistan</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+              <div>
+                <span class="info-label">Experience</span>
+                <span class="info-value">AI/ML Intern (2 Months)</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">muhammadsamiyt5@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="info-label">Contact</span>
+                <span class="info-value">+923296370164</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Text Right -->
+        <div class="about-text-area reveal slide-right">
+          <h3 class="about-heading">
+            Building the <span class="gradient-text">Future</span> with Code & Intelligence
+          </h3>
+          <div class="about-paragraphs">
+            <p>
+              I am a passionate <strong>Computer Science student</strong> deeply fascinated by the worlds of
+              <strong>software engineering</strong>, <strong>artificial intelligence</strong>, and
+              <strong>machine learning</strong>. My journey in technology is driven by a genuine desire to
+              solve real-world problems through elegant, efficient software solutions.
+            </p>
+            <p>
+              I possess strong expertise in <strong>C and C++</strong> — languages that have given me a
+              solid foundation in systems thinking, memory management, and performance optimization.
+              Alongside these, I have developed intermediate proficiency in <strong>Python</strong>,
+              enabling me to explore the expansive ecosystems of data science and ML libraries.
+            </p>
+            <p>
+              I recently completed a <strong>2-month remote AI/ML internship</strong> where I gained
+              hands-on practical experience in AI and machine learning development — including data
+              preprocessing, model training, and real-world ML implementation.
+            </p>
+            <p>
+              I am a <strong>continuous learner</strong> who thrives on challenges. Whether it's
+              competitive programming, building systems from scratch, or exploring cutting-edge AI research,
+              I am always pushing my boundaries through projects, certifications, and online courses.
+            </p>
+          </div>
+
+          <!-- Highlights -->
+          <div class="about-highlights">
+            <div class="highlight-chip"><i class="fas fa-check-circle"></i> C/C++ Expert</div>
+            <div class="highlight-chip"><i class="fas fa-check-circle"></i> Python Developer</div>
+            <div class="highlight-chip"><i class="fas fa-check-circle"></i> AI/ML Enthusiast</div>
+            <div class="highlight-chip"><i class="fas fa-check-circle"></i> Problem Solver</div>
+            <div class="highlight-chip"><i class="fas fa-check-circle"></i> ML Intern</div>
+            <div class="highlight-chip"><i class="fas fa-check-circle"></i> OOP Practitioner</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATISTICS SECTION ===================== -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-code"></i></div>
+          <div class="stat-number" data-target="4" data-suffix="+">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card reveal delay-1">
+          <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="stat-number" data-target="2" data-suffix=" Mo">0</div>
+          <div class="stat-label">Experience</div>
+        </div>
+        <div class="stat-card reveal delay-2">
+          <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+          <div class="stat-number" data-target="1" data-suffix="">0</div>
+          <div class="stat-label">Certification</div>
+        </div>
+        <div class="stat-card reveal delay-3">
+          <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="stat-number" data-target="3" data-suffix="+">0</div>
+          <div class="stat-label">Programming Languages</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION SECTION ===================== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Academic Journey</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <p class="section-subtitle">The foundation of my technical expertise</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Timeline Item -->
+        <div class="timeline-item reveal">
+          <div class="timeline-connector">
+            <div class="timeline-dot">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div class="timeline-badge">Current</div>
+              <div class="timeline-date">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Present – 2029</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">Bachelor in Computer Science</h3>
+            <p class="timeline-institution">
+              <i class="fas fa-university"></i>
+              University of Narowal
+            </p>
+            <p class="timeline-description">
+              Pursuing a comprehensive undergraduate degree in Computer Science, covering core topics
+              including data structures, algorithms, object-oriented programming, artificial intelligence,
+              machine learning, database systems, and software engineering principles.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Data Structures</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">OOP</span>
+              <span class="tag">AI Fundamentals</span>
+              <span class="tag">Database Systems</span>
+              <span class="tag">Software Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Education -->
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-connector">
+            <div class="timeline-dot">
+              <i class="fas fa-school"></i>
+            </div>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div class="timeline-badge completed">Completed</div>
+              <div class="timeline-date">
+                <i class="fas fa-calendar-alt"></i>
+                <span>2022-2024</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">Intermediate in Computer Science (ICS)</h3>
+            <p class="timeline-institution">
+              <i class="fas fa-school"></i>
+              Gujranwala Board
+            </p>
+            <p class="timeline-description">
+              Completed intermediate education with a focus on mathematics and science subjects,
+              laying the analytical and logical groundwork for a career in computer science and engineering.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Mathematics</span>
+              <span class="tag">Physics</span>
+              <span class="tag">Computer Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE SECTION ===================== -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Professional Journey</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-subtitle">Real-world exposure to AI and ML development</p>
+      </div>
+
+      <div class="experience-grid">
+        <!-- Experience Card -->
+        <div class="experience-card glass-card reveal">
+          <div class="exp-card-top">
+            <div class="exp-company-logo">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="exp-meta">
+              <div class="exp-badge">
+                <span class="badge-dot green"></span>
+                Remote Internship
+              </div>
+              <div class="exp-duration">
+                <i class="fas fa-clock"></i>
+                2 Months
+              </div>
+            </div>
+          </div>
+          <h3 class="exp-title">AI/ML Engineer Intern</h3>
+          <p class="exp-company">Artificial Intelligence & Machine Learning Division</p>
+          <p class="exp-period"><i class="fas fa-calendar"></i> Duration: 2 Months | Remote</p>
+          <p class="exp-description">
+            During this remote internship, I gained substantial hands-on experience working on
+            real-world AI and Machine Learning projects. My responsibilities included data
+            collection and preprocessing, exploratory data analysis, training and evaluating
+            classification models, and implementing ML concepts from theory to practical deployment.
+          </p>
+          <div class="exp-responsibilities">
+            <div class="responsibility-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Data preprocessing and feature engineering</span>
+            </div>
+            <div class="responsibility-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Model training and performance evaluation</span>
+            </div>
+            <div class="responsibility-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Practical implementation of ML algorithms</span>
+            </div>
+            <div class="responsibility-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Exploratory data analysis and visualization</span>
+            </div>
+          </div>
+          <div class="exp-tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS SECTION ===================== -->
+  <section id="certifications" class="section certifications-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Achievements</span>
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Validated expertise through recognized credentials</p>
+      </div>
+
+      <div class="cert-grid">
+        <!-- Certification Card -->
+        <div class="cert-card glass-card reveal">
+          <div class="cert-glow"></div>
+          <div class="cert-header">
+            <div class="cert-logo anthropic">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="cert-verified">
+              <i class="fas fa-shield-check"></i>
+              Verified
+            </div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Anthropic Certified</h3>
+            <p class="cert-issuer">
+              <i class="fas fa-building"></i>
+              Anthropic AI
+            </p>
+            <p class="cert-description">
+              Certified by Anthropic, the leading AI safety company behind Claude. This certification
+              validates proficiency in responsible AI development, understanding large language models,
+              and applying AI systems ethically and effectively.
+            </p>
+            <div class="cert-skills">
+              <span class="cert-skill">Large Language Models</span>
+              <span class="cert-skill">AI Safety</span>
+              <span class="cert-skill">Prompt Engineering</span>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-badge-row">
+              <div class="cert-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="cert-label">Industry Recognized</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder / More Coming -->
+        <div class="cert-card cert-coming-soon glass-card reveal delay-2">
+          <div class="cert-soon-icon">
+            <i class="fas fa-plus-circle"></i>
+          </div>
+          <h3 class="cert-soon-title">More Coming Soon</h3>
+          <p class="cert-soon-text">
+            Actively pursuing certifications in Machine Learning, Deep Learning, and Cloud AI services.
+          </p>
+          <div class="cert-progress-area">
+            <div class="cert-progress-item">
+              <span>Google ML Course</span>
+              <div class="cert-prog-bar"><div class="cert-prog-fill" style="width:75%"></div></div>
+            </div>
+            <div class="cert-progress-item">
+              <span>AWS Cloud Practitioner</span>
+              <div class="cert-prog-bar"><div class="cert-prog-fill" style="width:40%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-layout">
+
+        <!-- Programming Languages -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon"><i class="fas fa-terminal"></i></div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skills-bar-list">
+            <div class="skill-bar-item" data-skill="C" data-percent="90">
+              <div class="skill-bar-header">
+                <span class="skill-name"><i class="fas fa-code"></i> C</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-skill="C++" data-percent="88">
+              <div class="skill-bar-header">
+                <span class="skill-name"><i class="fas fa-code"></i> C++</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-skill="Python" data-percent="72">
+              <div class="skill-bar-header">
+                <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="72"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Libraries & Frameworks -->
+        <div class="skill-category reveal delay-1">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Libraries & Frameworks</h3>
+          </div>
+          <div class="skills-cards-grid">
+            <div class="skill-pill-card">
+              <div class="skill-pill-icon numpy"><i class="fas fa-chart-bar"></i></div>
+              <span>NumPy</span>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-icon pandas"><i class="fas fa-table"></i></div>
+              <span>Pandas</span>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-icon sklearn"><i class="fas fa-cogs"></i></div>
+              <span>Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="skill-category reveal delay-2">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+            <h3>Other Skills</h3>
+          </div>
+          <div class="other-skills-grid">
+            <div class="other-skill-card">
+              <i class="fas fa-puzzle-piece"></i>
+              <span>Problem Solving</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fas fa-sitemap"></i>
+              <span>Data Structures</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fas fa-object-group"></i>
+              <span>OOP</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fas fa-brain"></i>
+              <span>Machine Learning</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fas fa-robot"></i>
+              <span>AI Fundamentals</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </div>
+            <div class="other-skill-card">
+              <i class="fas fa-project-diagram"></i>
+              <span>DSA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Handpicked projects showcasing my skills and creativity</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cpp">C++</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: Clinical Decision Support System -->
+        <div class="project-card glass-card reveal" data-category="cpp">
+          <div class="project-image">
+            <div class="project-img-placeholder p1-bg">
+              <i class="fas fa-heartbeat"></i>
+              <div class="project-img-overlay">
+                <span>Healthcare AI</span>
+              </div>
+            </div>
+            <div class="project-number">01</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-row">
+              <span class="project-category-badge cpp-badge">C++</span>
+              <span class="project-category-badge oop-badge">OOP</span>
+            </div>
+            <h3 class="project-title">Clinical Decision Support System</h3>
+            <p class="project-description">
+              A C++ healthcare application that diagnoses patients based on symptoms, recommends
+              medicines, and suggests precautions using rule-based logic and intelligent decision trees.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">C++</span>
+              <span class="tech-chip">OOP</span>
+              <span class="tech-chip">File Handling</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Muhammad-Sami-Ullah53/Clinical_Decision_Support_System" target="_blank" rel="noopener noreferrer" class="proj-btn github-btn">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/posts/sami-ullah-sarfraz-b5a0b7394_cplusplus-healthcaretech-programming-activity-7455832524892672001-jnE6" target="_blank" rel="noopener noreferrer" class="proj-btn demo-btn">
+                <i class="fas fa-play-circle"></i>
+                <span>Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AI-Based Mini LinkedIn -->
+        <div class="project-card glass-card reveal delay-1" data-category="cpp">
+          <div class="project-image">
+            <div class="project-img-placeholder p2-bg">
+              <i class="fas fa-network-wired"></i>
+              <div class="project-img-overlay">
+                <span>Recruitment AI</span>
+              </div>
+            </div>
+            <div class="project-number">02</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-row">
+              <span class="project-category-badge cpp-badge">C++</span>
+              <span class="project-category-badge dsa-badge">DSA</span>
+            </div>
+            <h3 class="project-title">AI-Based Mini LinkedIn</h3>
+            <p class="project-description">
+              A recruitment management platform where candidates create profiles, apply for jobs,
+              recruiters accept or reject applications, and an AI-inspired recommendation system
+              suggests suitable jobs based on candidate skills.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">C++</span>
+              <span class="tech-chip">OOP</span>
+              <span class="tech-chip">DSA</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Muhammad-Sami-Ullah53/AI_Based_Mini_Linkedin" target="_blank" rel="noopener noreferrer" class="proj-btn github-btn">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/posts/sami-ullah-sarfraz-b5a0b7394_cplusplus-cpp-objectorientedprogramming-activity-7476900075726639104-xxHT" target="_blank" rel="noopener noreferrer" class="proj-btn demo-btn">
+                <i class="fas fa-play-circle"></i>
+                <span>Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Desktop Voice Assistant -->
+        <div class="project-card glass-card reveal delay-2" data-category="python">
+          <div class="project-image">
+            <div class="project-img-placeholder p3-bg">
+              <i class="fas fa-microphone-alt"></i>
+              <div class="project-img-overlay">
+                <span>Voice AI</span>
+              </div>
+            </div>
+            <div class="project-number">03</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-row">
+              <span class="project-category-badge python-badge">Python</span>
+              <span class="project-category-badge ai-badge">AI</span>
+            </div>
+            <h3 class="project-title">Desktop Voice Assistant</h3>
+            <p class="project-description">
+              An intelligent Python desktop voice assistant capable of controlling the laptop,
+              performing automation tasks, opening applications, searching the web, and executing
+              complex voice commands with natural language understanding.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Speech Recognition</span>
+              <span class="tech-chip">Automation</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Muhammad-Sami-Ullah53/Desktop_Voice_Assistant" target="_blank" rel="noopener noreferrer" class="proj-btn github-btn">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/posts/sami-ullah-sarfraz-b5a0b7394_python-artificialintelligence-ai-activity-7476907613348343808-CT49" target="_blank" rel="noopener noreferrer" class="proj-btn demo-btn">
+                <i class="fas fa-play-circle"></i>
+                <span>Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Heart Disease Prediction -->
+        <div class="project-card glass-card reveal delay-3" data-category="ml python">
+          <div class="project-image">
+            <div class="project-img-placeholder p4-bg">
+              <i class="fas fa-heart-pulse"></i>
+              <div class="project-img-overlay">
+                <span>ML Prediction</span>
+              </div>
+            </div>
+            <div class="project-number">04</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-row">
+              <span class="project-category-badge python-badge">Python</span>
+              <span class="project-category-badge ml-badge">ML</span>
+            </div>
+            <h3 class="project-title">Heart Disease Prediction System</h3>
+            <p class="project-description">
+              A Machine Learning application that predicts whether a patient has heart disease and
+              estimates the associated risk percentage using trained classification models, achieving
+              high accuracy on medical datasets.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Scikit-learn</span>
+              <span class="tech-chip">NumPy</span>
+              <span class="tech-chip">Pandas</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Muhammad-Sami-Ullah53/Heart_Disease_Prediction" target="_blank" rel="noopener noreferrer" class="proj-btn github-btn">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <span class="proj-btn demo-btn disabled" title="Demo coming soon">
+                <i class="fas fa-clock"></i>
+                <span>Coming Soon</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Open to opportunities, collaborations & conversations</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Left -->
+        <div class="contact-info reveal slide-left">
+          <h3 class="contact-heading">
+            Let's Build Something <span class="gradient-text">Amazing</span> Together
+          </h3>
+          <p class="contact-text">
+            Whether you have a project in mind, want to discuss AI/ML, or just want to say hello —
+            my inbox is always open. I'm actively looking for internships, collaborations, and
+            new learning opportunities.
+          </p>
+
+          <!-- Contact Links -->
+          <div class="contact-links">
+            <a href="mailto:muhammadsamiyt5@gmail.com" class="contact-link-card">
+              <div class="contact-link-icon email-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">muhammadsamiyt5@gmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="tel:+923296370164" class="contact-link-card">
+              <div class="contact-link-icon phone-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">Phone</span>
+                <span class="contact-link-value">+923296370164</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://github.com/Muhammad-Sami-Ullah53" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+              <div class="contact-link-icon github-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">Muhammad-Sami-Ullah53</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sami-ullah-sarfraz-b5a0b7394" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+              <div class="contact-link-icon linkedin-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Sami Ullah Sarfraz</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form Right -->
+        <div class="contact-form-wrapper reveal slide-right">
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <h3 class="form-title">Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Full Name</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="fname" name="fname" placeholder="Your full name" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="femail" name="femail" placeholder="your@email.com" required />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="fsubject" name="fsubject" placeholder="What's this about?" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-dots"></i>
+                <textarea id="fmessage" name="fmessage" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <i class="fas fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Footer Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Sami</span>
+            <span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            Building intelligent solutions at the intersection of code and creativity.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/Muhammad-Sami-Ullah53" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sami-ullah-sarfraz-b5a0b7394" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:muhammadsamiyt5@gmail.com" aria-label="Email" class="footer-social-icon">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+923296370164" aria-label="Phone" class="footer-social-icon">
+              <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/923296370164" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="footer-social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Nav -->
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Projects -->
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Projects</h4>
+          <ul>
+            <li><a href="https://github.com/Muhammad-Sami-Ullah53/Clinical_Decision_Support_System" target="_blank" rel="noopener noreferrer">Clinical DSS</a></li>
+            <li><a href="https://github.com/Muhammad-Sami-Ullah53/AI_Based_Mini_Linkedin" target="_blank" rel="noopener noreferrer">AI Mini LinkedIn</a></li>
+            <li><a href="https://github.com/Muhammad-Sami-Ullah53/Desktop_Voice_Assistant" target="_blank" rel="noopener noreferrer">Voice Assistant</a></li>
+            <li><a href="https://github.com/Muhammad-Sami-Ullah53/Heart_Disease_Prediction" target="_blank" rel="noopener noreferrer">Heart Disease ML</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footerYear"></span> Designed &amp; Developed with
+          <i class="fas fa-heart heart-icon"></i> by
+          <strong>Muhammad Sami Ullah</strong>
+        </p>
+        <p class="footer-rights">All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCROLL TO TOP BUTTON ===================== -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+<!-- Floating Contact Button -->
+<div class="floating-contact">
+    <button id="contactToggle" class="contact-toggle">
+        <i class="fas fa-comments"></i>
+        <span>Let's Talk</span>
+    </button>
+
+    <div id="contactMenu" class="contact-menu">
+        <a href="mailto:muhammadsamiyt5@gmail.com">
+            <i class="fas fa-envelope"></i> Gmail
+        </a>
+
+        <a href="tel:+923296370164">
+            <i class="fas fa-phone"></i> Phone
+        </a>
+
+        <a href="https://www.linkedin.com/in/sami-ullah-sarfraz-b5a0b7394" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="https://github.com/Muhammad-Sami-Ullah53" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <a href="whatsapp://send?phone=+923296370164" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+</div>
+
+<!-- WhatsApp Message Popup -->
+
+<div class="whatsapp-modal" id="whatsappModal">
+
+    <div class="whatsapp-box glass-card">
+
+        <button class="close-modal" id="closeWhatsappModal">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <h2>Let's Talk 👋</h2>
+
+        <p>
+            Have a project or opportunity?
+            Send me a quick message.
+        </p>
+
+        <input
+            type="text"
+            id="visitorName"
+            placeholder="Your Name"
+        >
+
+        <input
+            type="email"
+            id="visitorEmail"
+            placeholder="Your Email (Optional)"
+        >
+
+        <textarea
+            id="visitorMessage"
+            rows="5"
+            placeholder="Write your message..."
+        ></textarea>
+
+        <button class="send-btn" id="sendWhatsapp">
+            <i class="fab fa-whatsapp"></i>
+            Send via WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
