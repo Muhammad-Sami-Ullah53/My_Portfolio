@@ -231,13 +231,13 @@
   let mouseY = -9999;
 
   const CONFIG = {
-    count: 80,
+    count: 300,
     minRadius: 1,
     maxRadius: 2.5,
     minSpeed: 0.15,
     maxSpeed: 0.55,
-    connectionDistance: 130,
-    mouseRepelRadius: 100,
+    connectionDistance: 100,
+    mouseRepelRadius: 500,
     mouseRepelStrength: 1.5,
     colors: ['rgba(99,102,241,', 'rgba(139,92,246,', 'rgba(59,130,246,', 'rgba(34,211,238,']
   };
@@ -1033,3 +1033,59 @@ Sent from your Portfolio Website.`;
 
 
 })();
+
+// document.querySelectorAll(".project-media").forEach(media => {
+
+//     const video = media.querySelector(".project-video");
+
+//     // Desktop
+//     media.addEventListener("mouseenter", () => {
+//         if (window.innerWidth > 768) {
+//             video.currentTime = 0;
+//             video.play().catch(err => console.log(err));
+//         }
+//     });
+
+//     media.addEventListener("mouseleave", () => {
+//         if (window.innerWidth > 768) {
+//             video.pause();
+//             video.currentTime = 0;
+//         }
+//     });
+
+//     // Mobile
+//     media.addEventListener("click", () => {
+//         if (window.innerWidth <= 768) {
+//             if (video.paused) {
+//                 video.play().catch(err => console.log(err));
+//             } else {
+//                 video.pause();
+//             }
+//         }
+//     });
+
+// });
+
+// const videos = document.querySelectorAll(".project-video");
+
+// const observer = new IntersectionObserver((entries) => {
+
+//     entries.forEach(entry => {
+
+//         const video = entry.target;
+
+//         if(entry.isIntersecting){
+
+//             video.play().catch(()=>{});
+
+//         }else{
+
+//             video.pause();
+
+//         }
+
+//     });
+
+// },{threshold:0.4});
+
+// videos.forEach(video => observer.observe(video));

@@ -133,7 +133,9 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
   border-color: var(--border-hover);
   box-shadow: var(--shadow-card), var(--shadow-glow-blue);
   transform: translateY(-4px);
+  
 }
+
 
 .highlight-text {
   color: var(--color-violet);
@@ -427,7 +429,27 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+  
 }
+ /* .reveal{
+
+opacity:0;
+
+transform:
+translateY(80px)
+scale(.9);
+
+}
+
+.reveal.visible{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+} */
 
 .reveal.visible {
   opacity: 1;
@@ -736,8 +758,8 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
 
 .hero-avatar-wrapper {
   position: relative;
-  width: 360px;
-  height: 360px;
+   width:clamp(220px,38vw,360px);
+    height:clamp(220px,38vw,360px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -769,7 +791,7 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
 .ring-3 {
   width: 64%; height: 64%;
   border-color: rgba(34, 211, 238, 0.1);
-  border-bottom-color: rgba(34, 211, 238, 0.5);
+  border-bottom-color: rgba(67, 120, 255, 0.5);
   animation-duration: 18s;
 }
 
@@ -779,7 +801,13 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
 }
 
 /* Avatar Center */
-.avatar-placeholder {
+/* .avatar-placeholder {
+  transition:
+        transform .12s ease-out,
+        filter .12s ease-out;
+    transform-style:preserve-3d;
+    will-change:transform,filter;
+    backface-visibility:hidden;
   width: 50%;
   height: 50%;
   border-radius: 50%;
@@ -791,6 +819,34 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
   color: white;
   box-shadow: 0 0 50px rgba(99, 102, 241, 0.5), 0 0 100px rgba(99, 102, 241, 0.2);
   animation: avatarPulse 4s ease-in-out infinite;
+} */
+
+.avatar-placeholder{
+    position: relative;
+    width: 72%;
+    height: 72%;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 5;
+
+    border: 4px solid rgba(255,255,255,0.08);
+
+    background: linear-gradient(135deg,#3b82f6,#8b5cf6);
+
+    box-shadow:
+        0 0 30px rgba(59,130,246,.35),
+        0 0 60px rgba(139,92,246,.25);
+
+    transition: .4s ease;
+}
+
+.profile-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:50%;
+    transition:.4s ease;
 }
 
 @keyframes avatarPulse {
@@ -2494,6 +2550,10 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
   .cert-grid { grid-template-columns: 1fr; }
 
   .experience-card { padding: 28px 24px; }
+
+  .scroll-indicator{
+        display:none !important;
+    }
 }
 
 /* Mobile — 480px */
@@ -2701,3 +2761,142 @@ button { font-family: 'Poppins', sans-serif; cursor: pointer; border: none; outl
   .stats-grid { grid-template-columns: 1fr; }
 }
 
+@media(max-width:768px){
+
+.hero-blob{
+
+filter:blur(50px);
+
+opacity:.08;
+
+}
+
+}
+
+html{
+    width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+/* my pic  */
+.avatar-placeholder{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+
+    border:4px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 0 25px rgba(59,130,246,.5),
+    0 0 60px rgba(139,92,246,.35),
+    inset 0 0 15px rgba(255,255,255,.08);
+
+    transition:.4s ease;
+    transform-style:preserve-3d;
+    will-change:transform;
+}
+
+/* my pic responsiveness */
+/* ===== Mobile Hero ===== */
+
+@media (max-width:768px){
+
+.hero-container{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:45px;
+}
+
+.hero-content{
+    order:2;
+    align-items:center;
+}
+
+.hero-visual{
+    order:1;
+}
+
+.hero-avatar-wrapper{
+    width:250px;
+    height:250px;
+    margin:auto;
+}
+
+.avatar-placeholder{
+    width:72%;
+    height:72%;
+}
+
+}
+@media (max-width:480px){
+
+.hero-avatar-wrapper{
+
+width:210px;
+
+height:210px;
+
+}
+
+}
+@media (max-width:360px){
+
+.hero-avatar-wrapper{
+
+width:180px;
+
+height:180px;
+
+}
+
+}
+
+/* ==========================
+PROJECT MEDIA
+========================== */
+
+/* ===========================
+PROJECT VIDEO
+=========================== */
+
+.project-media{
+    height:240px;
+}
+
+.project-media video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/* Hover */
+
+.project-card:hover .project-video{
+
+    transform:scale(1.08);
+
+}
+
+.project-card:hover .project-overlay{
+
+    background:rgba(0,0,0,.12);
+
+}
+
+.project-card:hover .play-overlay{
+
+    opacity:0;
+
+}
